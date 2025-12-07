@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "route": "/api/visitor",
+      "allowedRoles": ["anonymous"],
+      "rewrite": "https://gonzalofloresresumefunction-enave3c6akg5d7dg.centralus-01.azurewebsites.net/api/HttpVisitor?code=BU3ORtfBjJS-2JJ1FblTIvxheCNELT6oPo-KdCj4rDDwAzFu5ulMZg=="
+    }
+  ]
+}
