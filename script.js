@@ -1,7 +1,7 @@
 // Function to fetch the visitor count from the Azure Function API
 function updateVisitorCount() {
     // *** 1. Define the CORRECT URL for your deployed Azure Function API ***
-    const api_url = "https://gonzalofloresresumefunction-enave3c6akg5d7dg.centralus-01.azurewebsites.net/api/HttpVisitor";
+    const api_url = "https://gonzalofloresresumefunction-enave3c6akg5d7dg.centralus-01.azurewebsites.net/api/HttpVisitor?code=BU3ORtfBjJS-2JJ1FblTIvxheCNELT6oPo-KdCj4rDDwAzFu5ulMZg==";
 
     // 2. Use the fetch API to make a GET request to your backend
     fetch(api_url)
