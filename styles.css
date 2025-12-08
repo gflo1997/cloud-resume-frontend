@@ -49,7 +49,7 @@ body {
     inset 0 0 24px rgba(255, 255, 255, 0.08);
 }
 
-/* AERO LIGHT GLOSS STRIPE */
+/* GLOSS STRIPE */
 .card::before {
   content: "";
   position: absolute;
@@ -57,11 +57,7 @@ body {
   left: -40 percent;
   width: 80 percent;
   height: 100 percent;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.12),
-    rgba(255, 255, 255, 0.02)
-  );
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
   transform: skewX(-22deg);
   pointer-events: none;
 }
@@ -82,10 +78,6 @@ body {
   border: none;
   box-shadow: 0 0 18px rgba(59, 130, 246, 0.55);
   padding: 22px;
-}
-
-.header-main h1 {
-  margin: 0;
 }
 
 .name {
@@ -114,15 +106,6 @@ body {
   color: #e0f2fe;
 }
 
-.header-meta a {
-  color: #f0abfc;
-  text-decoration: none;
-}
-
-.header-meta a:hover {
-  text-decoration: underline;
-}
-
 /* TITLES */
 
 .section-title {
@@ -136,7 +119,7 @@ body {
   font-weight: 700;
 }
 
-/* JOB SECTIONS */
+/* EXPERIENCE */
 
 .job h3 {
   margin: 0;
@@ -181,13 +164,15 @@ body {
   font-size: 13px;
 }
 
-/* CERTS */
+/* CERTS AND COMPACT LIST */
+
 .compact-list li {
   font-size: 13px;
   color: #f1f5f9;
 }
 
 /* VISITOR COUNTER */
+
 .project-counter {
   font-size: 20px;
   font-weight: bold;
@@ -197,6 +182,7 @@ body {
 }
 
 /* BLOG TEXT */
+
 .blog p {
   font-size: 13px;
   color: #e0e7ff;
@@ -225,25 +211,9 @@ body {
 }
 
 @keyframes pulse {
-  0 percent {
-    transform: scale(1);
-  }
-  50 percent {
-    transform: scale(1.05);
-  }
-  100 percent {
-    transform: scale(1);
-  }
-}
-
-/* REDUCED MOTION */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
+  0 percent { transform: scale(1); }
+  50 percent { transform: scale(1.05); }
+  100 percent { transform: scale(1); }
 }
 
 /* RESPONSIVE */
@@ -252,42 +222,31 @@ body {
   .grid {
     grid-template-columns: 1fr;
   }
-
   .page {
     padding: 14px;
     margin: 18px auto;
   }
-
   .name {
     font-size: 28px;
   }
-
   .role {
     font-size: 12px;
   }
 }
 
 @media (max-width: 600px) {
-  .page {
-    padding: 10px;
-  }
-
   .card {
     padding: 16px;
   }
-
   body {
     font-size: 13px;
   }
-
   .job ul {
     font-size: 12px;
   }
-
   .compact-list li {
     font-size: 12px;
   }
-
   .project-counter {
     font-size: 18px;
   }
