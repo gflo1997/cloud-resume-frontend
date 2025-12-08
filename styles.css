@@ -1,2 +1,208 @@
-body {  font-family: Arial, Helvetica, sans-serif;  background: #0f172a;  color: #e5e7eb;  margin: 0;  padding: 0;}main {  max-width: 900px;  margin: 40px auto;  background: #020617;  padding: 32px;  border-radius: 16px;  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);}h1 {  font-size: 40px;  margin-bottom: 4px;}.subtitle {  color: #38bdf8;  font-size: 16px;}h2 {  margin-top: 28px;  margin-bottom: 8px;  color: #a5b4fc;}ul {  padding-left: 20px;}section {  margin-bottom: 16px;}#counter {  font-size: 18px;  font-weight: bold;  color: #22c55e;}
+/* Microsoft/Azure-Inspired Color Palette */
+:root {
+    --ms-navy: #002050;          /* Deep Navy Blue (Primary background) */
+    --ms-blue: #0078d4;          /* Microsoft/Azure Blue (Highlights/Accents) */
+    --ms-green: #107c10;         /* Microsoft Green (Accent for Counter) */
+    --bg-light: #f3f3f3;         /* Light Gray (Main Container Background) */
+    --color-text: #333;          /* Dark Text */
+    --color-subtle: #555;        /* Secondary Text */
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* Base Styles */
+body {
+    font-family: var(--font-stack);
+    background: var(--ms-navy);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Main Container */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.header-block {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--ms-blue);
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 4px;
+    color: var(--ms-navy);
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: var(--ms-blue);
+    margin-top: 5px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 14px;
+    color: var(--color-subtle);
+    margin-top: 10px;
+}
+
+/* Main Two-Column Grid */
+.main-grid {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr; /* Left column wider for experience details */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 22px;
+    color: var(--ms-navy);
+    border-bottom: 2px solid var(--ms-blue);
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Experience Styling */
+.job-card {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+    font-size: 17px;
+    color: var(--ms-blue);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.job-meta {
+    font-size: 13px;
+    color: var(--color-subtle);
+    font-weight: 400;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+ul li {
+    margin-bottom: 6px;
+    list-style-type: '⚡';
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+/* Skills Matrix (Right Column) */
+.skills-grid h3 {
+    color: var(--ms-navy);
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.skills-category {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid rgba(0, 120, 212, 0.2);
+    border-radius: 4px;
+    background: rgba(0, 120, 212, 0.05);
+}
+
+.skills-category p {
+    font-size: 14px;
+    margin: 0;
+    color: var(--color-subtle);
+}
+
+/* Certifications & Education */
+.cert-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cert-list li {
+    list-style-type: '✅';
+    margin-bottom: 8px;
+}
+
+.education {
+    margin-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+}
+
+.education p {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+/* Project Stats / Counter */
+.counter-section {
+    margin-top: 20px;
+}
+
+.counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px 0;
+    border: 2px solid var(--ms-green);
+    border-radius: 4px;
+    background: rgba(16, 124, 16, 0.05);
+}
+
+#counter {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ms-green);
+}
+
+.counter-box p {
+    font-size: 13px;
+    color: var(--color-subtle);
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically on mobile */
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+    
+    .contact-info {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
