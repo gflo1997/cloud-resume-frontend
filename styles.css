@@ -30,3 +30,205 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 2fr 1.25fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: linear-gradient(90deg, #0f172a, #0b1120);
+  border: 1px solid rgba(56, 189, 248, 0.75);
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-size: 32px;
+  letter-spacing: 1.6px;
+  margin: 0;
+  color: #e5e7eb;
+}
+
+.role {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: #38bdf8;
+}
+
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #cbd5f5;
+}
+
+.header-meta a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+.header-meta a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+
+.section-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: #a5b4fc;
+}
+
+.summary p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Experience */
+
+.job + .job {
+  margin-top: 16px;
+  border-top: 1px solid rgba(51, 65, 85, 0.8);
+  padding-top: 14px;
+}
+
+.job-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 6px;
+}
+
+.job h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #e5e7eb;
+}
+
+.job-meta {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.job ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.job-subtitle {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #facc15;
+}
+
+.job-projects {
+  margin-top: 4px;
+}
+
+/* Achievements */
+
+.card ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Skills */
+
+.skills {
+  background: radial-gradient(circle at top, #0b1120 0, #020617 55%);
+}
+
+.skills-group + .skills-group {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(30, 64, 175, 0.6);
+}
+
+.skills-group h3 {
+  margin: 0 0 3px;
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.skills-group p {
+  margin: 0;
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+/* Compact lists in side column */
+
+.compact-list {
+  margin: 2px 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Project stats */
+
+.project-stats {
+  background: #020617;
+  border: 1px solid rgba(74, 222, 128, 0.7);
+}
+
+.project-label {
+  margin: 4px 0 4px;
+  font-size: 13px;
+  color: #bbf7d0;
+}
+
+.project-counter {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+/* Blog */
+
+.blog p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #e5e7eb;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .page {
+    margin: 16px auto;
+    padding: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
