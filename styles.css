@@ -1,208 +1,269 @@
-/* Microsoft/Azure-Inspired Color Palette */
-:root {
-    --ms-navy: #002050;          /* Deep Navy Blue (Primary background) */
-    --ms-blue: #0078d4;          /* Microsoft/Azure Blue (Highlights/Accents) */
-    --ms-green: #107c10;         /* Microsoft Green (Accent for Counter) */
-    --bg-light: #f3f3f3;         /* Light Gray (Main Container Background) */
-    --color-text: #333;          /* Dark Text */
-    --color-subtle: #555;        /* Secondary Text */
-    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Desktop background with XP Bliss */
+
+* {
+  box-sizing: border-box;
 }
 
-/* Base Styles */
 body {
-    font-family: var(--font-stack);
-    background: var(--ms-navy);
-    color: var(--color-text);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  margin: 0;
+  font-family: Tahoma, Verdana, Segoe UI, sans-serif;
+  background: url("media/Background.webp") center center fixed no-repeat;
+  background-size: cover;
+  color: #111111;
 }
 
-/* Main Container */
-main {
-    max-width: 1200px;
-    margin: 40px auto;
-    background: var(--bg-light);
-    padding: 30px;
-    border-radius: 6px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+/* Slight dark overlay for readability */
+.desktop {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35));
 }
 
-/* Header */
-.header-block {
-    text-align: center;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 3px solid var(--ms-blue);
+/* XP window */
+
+.window {
+  width: 100%;
+  max-width: 1120px;
+  border-radius: 6px;
+  border: 1px solid #003399;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  background: #ece9d8;
+  animation: windowDrop 0.5s ease-out;
 }
 
-h1 {
-    font-size: 40px;
-    margin-bottom: 4px;
-    color: var(--ms-navy);
-    font-weight: 700;
+/* Title bar */
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px;
+  background: linear-gradient(90deg, #0a5fd3, #3b82f6);
+  color: white;
 }
 
-.subtitle {
-    font-size: 18px;
-    color: var(--ms-blue);
-    margin-top: 5px;
+.title-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    font-size: 14px;
-    color: var(--color-subtle);
-    margin-top: 10px;
+.title-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #22c55e 40%, #15803d);
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
 }
 
-/* Main Two-Column Grid */
-.main-grid {
-    display: grid;
-    grid-template-columns: 2.5fr 1fr; /* Left column wider for experience details */
-    gap: 30px;
-    margin-top: 20px;
+.title-text {
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
 
-/* Section Headings */
-h2 {
-    font-size: 22px;
-    color: var(--ms-navy);
-    border-bottom: 2px solid var(--ms-blue);
-    padding-bottom: 5px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    font-weight: 600;
+/* XP buttons */
+
+.title-buttons {
+  display: flex;
+  gap: 4px;
 }
 
-/* Experience Styling */
-.job-card {
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+.btn {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #004aa8;
+  background: linear-gradient(180deg, #fefefe, #d4d0c8);
+  box-shadow: inset 1px 1px 0 #ffffff;
 }
 
-.job-card h3 {
-    font-size: 17px;
-    color: var(--ms-blue);
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 600;
+.btn-close {
+  background: linear-gradient(180deg, #ff5a5a, #c70000);
 }
 
-.job-meta {
-    font-size: 13px;
-    color: var(--color-subtle);
-    font-weight: 400;
+/* Menu bar */
+
+.menu-bar {
+  display: flex;
+  gap: 16px;
+  padding: 4px 10px;
+  background: #d4d0c8;
+  border-bottom: 1px solid #ffffff;
+  font-size: 12px;
+}
+
+.menu-item {
+  cursor: default;
+}
+
+/* Window body */
+
+.window-body {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Columns */
+
+.columns {
+  display: grid;
+  grid-template-columns: 2fr 1.1fr;
+  gap: 12px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Panels */
+
+.panel {
+  border: 1px solid #b8b4ac;
+  background: #f5f4ea;
+  padding: 10px 12px;
+}
+
+.panel h2 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #003399;
+}
+
+/* Text styles */
+
+p {
+  margin: 0 0 6px;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 ul {
-    padding-left: 20px;
-    margin-top: 8px;
+  margin: 4px 0 4px;
+  padding-left: 18px;
+  font-size: 12px;
+  line-height: 1.35;
 }
 
-ul li {
-    margin-bottom: 6px;
-    list-style-type: '⚡';
-    padding-left: 5px;
-    font-size: 15px;
+/* Jobs */
+
+.job {
+  margin-bottom: 10px;
 }
 
-/* Skills Matrix (Right Column) */
+.job h3 {
+  margin: 0 0 2px;
+  font-size: 13px;
+}
+
+.job-meta {
+  margin: 0 0 4px;
+  font-size: 11px;
+  color: #555555;
+}
+
+.job-subtitle {
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+/* Skills */
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .skills-grid h3 {
-    color: var(--ms-navy);
-    font-size: 16px;
-    margin-bottom: 2px;
+  margin: 0 0 2px;
+  font-size: 12px;
 }
 
-.skills-category {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid rgba(0, 120, 212, 0.2);
-    border-radius: 4px;
-    background: rgba(0, 120, 212, 0.05);
+/* Simple lists */
+
+.simple-list {
+  list-style: square;
 }
 
-.skills-category p {
-    font-size: 14px;
-    margin: 0;
-    color: var(--color-subtle);
+/* Status bar */
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d4d0c8;
+  border-top: 1px solid #ffffff;
+  padding: 2px 6px;
+  font-size: 11px;
 }
 
-/* Certifications & Education */
-.cert-list {
-    list-style: none;
-    padding: 0;
+.status-left {
+  padding: 2px 6px;
+  border: 1px inset #ffffff;
+  background: #f5f4ea;
 }
 
-.cert-list li {
-    list-style-type: '✅';
-    margin-bottom: 8px;
+.status-right {
+  padding: 2px 6px;
+  border: 1px inset #ffffff;
+  background: #f5f4ea;
 }
 
-.education {
-    margin-top: 15px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 10px;
-}
-
-.education p {
-    font-size: 14px;
-    margin-bottom: 3px;
-}
-
-/* Project Stats / Counter */
-.counter-section {
-    margin-top: 20px;
-}
-
-.counter-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 12px 0;
-    border: 2px solid var(--ms-green);
-    border-radius: 4px;
-    background: rgba(16, 124, 16, 0.05);
-}
+/* Visitor count pulse */
 
 #counter {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--ms-green);
+  font-weight: bold;
+  color: #006600;
+  animation: pulse 1.8s ease-in-out infinite;
 }
 
-.counter-box p {
-    font-size: 13px;
-    color: var(--color-subtle);
-    margin: 0;
+/* Animations */
+
+@keyframes windowDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    main {
-        margin: 10px;
-        padding: 15px;
-    }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
 
-    .main-grid {
-        grid-template-columns: 1fr; /* Stack columns vertically on mobile */
-        gap: 15px;
-    }
+/* Responsive */
 
-    h1 {
-        font-size: 32px;
-    }
-    
-    .contact-info {
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: 5px;
-    }
+@media (max-width: 920px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .desktop {
+    padding: 12px;
+  }
+
+  .window {
+    font-size: 12px;
+  }
+
+  .title-text {
+    font-size: 11px;
+  }
+
+  .panel {
+    padding: 8px 9px;
+  }
 }
