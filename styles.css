@@ -352,6 +352,13 @@ ul {
   height: auto;
 }
 
+/* Phones only (screen width 600px or less) */
+@media only screen and (max-width: 600px) {
+    .clippy {
+        bottom: 16px !important; /* move it up 16px */
+    }
+}
+
 /* Animations */
 
 @keyframes windowDrop {
