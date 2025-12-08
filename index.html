@@ -1,62 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF 8">
+  <meta charset="UTF-8">
   <title>Gonzalo Flores Cloud Resume</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Gonzalo Flores</h1>
-      <p class="subtitle">
-        Cloud Systems Administrator  Azure  Microsoft 365  Security
-      </p>
+  <main class="page">
+    <!-- HEADER -->
+    <header class="header card">
+      <div class="header-main">
+        <h1 class="name">GONZALO FLORES</h1>
+        <p class="role">
+          Cloud Systems Engineer • Microsoft 365 • Automation
+        </p>
+      </div>
+      <div class="header-meta">
+        <span>📱 407 955 7844</span>
+        <span>☁️ Azure • Security</span>
+        <span>📍 Orlando FL</span>
+        <span>🔗 <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn Profile</a></span>
+        <span>✉️ <a href="mailto:gonzalofj@hotmail.com">gonzalofj@hotmail.com</a></span>
+      </div>
     </header>
 
-    <section>
-      <h2>About</h2>
-      <p>
-        Cloud Systems Administrator with hands on experience in Microsoft 365
-        administration, security, device deployment, and user support.
-        Focused on Azure, automation, and modern identity.
-      </p>
-    </section>
+    <div class="grid">
 
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Azure Administrator Associate AZ 104</li>
-        <li>Teams Administrator Associate MS 700</li>
-        <li>Security Plus</li>
-        <li>Network Plus</li>
-        <li>A Plus</li>
-      </ul>
-    </section>
+      <!-- LEFT COLUMN -->
+      <section class="left-column">
 
-    <section>
-      <h2>Experience Highlights</h2>
-      <ul>
-        <li>Manage Microsoft 365 services  Teams  Exchange  SharePoint  OneDrive  Entra ID</li>
-        <li>Implement MFA  Conditional Access  SSO and security controls</li>
-        <li>Standardize laptop imaging and remote onboarding processes</li>
-        <li>Work with MSPs on firewall and backup solutions</li>
-      </ul>
-    </section>
+        <!-- SUMMARY -->
+        <section class="card summary">
+          <h2 class="section-title">SUMMARY</h2>
+          <p>
+            Cloud Systems Administrator with hands on experience managing Microsoft 365 environments, user onboarding and offboarding, security configurations, and IT support operations. Skilled in cloud services, automation, device deployment, and cross platform integrations. Trusted to maintain system reliability, improve workflows, and support company wide productivity and security initiatives.
+          </p>
+        </section>
 
-    <section>
-      <h2>Visitor counter</h2>
-      <p id="counter">Visitors  loading</p>
-    </section>
+        <!-- EXPERIENCE -->
+        <section class="card">
+          <h2 class="section-title">EXPERIENCE</h2>
 
-    <section>
-      <h2>Blog</h2>
-      <p>
-        Coming soon  a short post about what I learned building this project
-      </p>
-    </section>
-  </main>
+          <article class="job">
+            <div class="job-header">
+              <h3>IT Cloud Systems Administrator</h3>
+              <span class="job-meta">FlexTrades • Hudson WI (Remote) • Mar 2024 to Present</span>
+            </div>
+            <ul>
+              <li>Manage Microsoft 365 services including Teams, Exchange Online, SharePoint, OneDrive, and Entra ID</li>
+              <li>Configure and maintain user accounts, permissions, MFA, Conditional Access, and SSO across platforms</li>
+              <li>Lead IT onboarding meetings for new hires, explaining Teams, Outlook, MFA, and SSO to non technical staff</li>
+              <li>Troubleshoot end user issues with software, hardware, connectivity, and collaboration tools</li>
+              <li>Administer Power Automate, PowerApps, and Microsoft Forms to streamline internal processes</li>
+              <li>Oversee email security with phishing review, Exchange transport rules, and CodeTwo signature templates</li>
+              <li>Support third party SaaS platforms including CloudCall, Salesforce Dialer, and HubSpot campaign integrations</li>
+              <li>Maintain remote patching and updates with Atera, including scripted software deployment and reboots</li>
+              <li>Partner with MSPs on networking, WatchGuard firewall upgrades, and Backblaze backups</li>
+              <li>Work with ISPs, MSPs, and office staff to resolve network outages, reboot servers, and coordinate on site fixes</li>
+              <li>Manage endpoint protection using SentinelOne and WatchGuard EPDR across all laptops</li>
+              <li>Respond to infrastructure events such as server restarts, firmware upgrades, and VM manager tasks</li>
+              <li>Manage license provisioning and cleanup to control cost and maintain compliance</li>
+            </ul>
+            <div class="job-subtitle">Highlighted projects</div>
+            <ul class="job-projects">
+              <li>First in house IT admin hire who rebuilt core systems from the ground up</li>
+              <li>Migrated company from password only logins to modern SSO with MFA</li>
+              <li>Standardized hardware and deployed a unified laptop image, cutting imaging time by about 70 percent and improving RAM performance by about 40 percent</li>
+              <li>Implemented iPad provisioning with IBM MaaS360 and created Managed Apple IDs</li>
+              <li>Introduced ticketing, patching, and asset management workflows using Atera</li>
+            </ul>
+          </article>
 
-  <script src="script.js"></script>
-</body>
-</html>
+          <article class="job">
+            <div class="job-header">
+              <h3>IT and Facilities Support Specialist</h3>
+              <span class="job-meta">Jackson Healthcare • Maitland FL • May 2023 to Mar 2024</span>
+            </div>
+            <ul>
+              <li>Managed Microsoft Intune for more than 200 devices across iOS, Android, and Windows</li>
+              <li>Deployed and maintained Microsoft Defender for Endpoint on more than 500 endpoints</li>
+              <li>Administered Exchange Online, SharePoint, Teams, and OneDrive
