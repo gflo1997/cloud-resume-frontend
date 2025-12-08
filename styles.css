@@ -355,7 +355,7 @@ ul {
 /* Phones only (screen width 600px or less) */
 @media only screen and (max-width: 600px) {
     .clippy {
-        bottom: 16px !important; /* move it up 16px */
+        bottom: 48px !important; /* move it up 48px */
     }
 }
 
